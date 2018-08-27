@@ -132,5 +132,5 @@ RUN set -ex; \
 
 ## Install awscli
 RUN apt-get update && apt-get install -y jq \
-                pip install awscli \
+        && pip install awscli \
         && rm -rf /var/lib/apt/lists/*
