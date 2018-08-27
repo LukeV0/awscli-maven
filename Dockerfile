@@ -21,7 +21,7 @@ ENV PYTHON_VERSION 3.7.0
 RUN set -ex \
 	\
 	&& savedAptMark="$(apt-mark showmanual)" \
-	&& apt-get update && apt-get install -y --no-install-recommends \
+	&& apt-get update && apt-get install -y \
 		dpkg-dev \
 		gcc \
 		libbz2-dev \
