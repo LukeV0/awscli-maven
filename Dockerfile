@@ -10,7 +10,7 @@ ENV PATH /usr/local/bin:$PATH
 ENV LANG C.UTF-8
 
 # runtime dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		netbase \
 	&& rm -rf /var/lib/apt/lists/*
@@ -21,7 +21,7 @@ ENV PYTHON_VERSION 3.7.0
 RUN set -ex \
 	\
 	&& savedAptMark="$(apt-mark showmanual)" \
-	&& apt-get update && apt-get install -y \
+	&& apt-get update && apt-get install -y --no-install-recommends \
 		dpkg-dev \
 		gcc \
 		libbz2-dev \
